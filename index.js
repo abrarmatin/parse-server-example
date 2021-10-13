@@ -43,6 +43,13 @@ app.get('/', function (req, res) {
   res.status(200).send('I dream of being a website.  Please star the parse-server repo on GitHub!');
 });
 
+//** STEP 3 **: Create Webhook for MUX
+app.post('/mux', async function(req, res) {
+  const { type: eventType, data: eventData } = await json(req);
+  Parse.Cloud.run('webhook', { eventType: eventType, eventData: eventData }, {})
+  res.status(200).send("Thanks, MUX!")
+});
+
 // There will be a test page available on the /test path of your server url
 // Remove this before launching your app
 app.get('/test', function (req, res) {
