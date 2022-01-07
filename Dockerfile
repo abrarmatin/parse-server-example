@@ -8,7 +8,7 @@ RUN npm install
 
 ENV APP_ID azulSocial
 ENV MASTER_KEY setYourMasterKey
-ENV DATABASE_URI setMongoDBURI
+# ENV DATABASE_URI setMongoDBURI
 
 # Optional (default : 'parse/cloud/main.js')
 # ENV CLOUD_CODE_MAIN cloudCodePath
