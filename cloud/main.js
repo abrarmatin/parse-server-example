@@ -16,7 +16,7 @@ Parse.Cloud.define('upload', async function(req) {
   // Create a new upload using the Mux SDK.
   const upload = await Video.Uploads.create({
     // Set the CORS origin to your application.
-    cors_origin: 'https://tiktokclone.herokuapp.com',
+    cors_origin: 'https://arcane-badlands-69566.herokuapp.com',
 
     // Specify the settings used to create the new Asset after
     // the upload is complete
