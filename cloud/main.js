@@ -12,7 +12,7 @@ const { Video } = new Mux();
 Parse.Cloud.define('upload', async function(req) {
   // Generate a passthrough ID that will be used to identify the video asset in Mux
 	const id = uuid();
-  
+  console.log('****** IN UPLOAD FUNCTION ********');  
   // Create a new upload using the Mux SDK.
   const upload = await Video.Uploads.create({
     // Set the CORS origin to your application.
@@ -40,6 +40,7 @@ Parse.Cloud.define('upload', async function(req) {
     // Now send back that passthrough ID and the upload URL so the client can use it!
     return {id: id, url: upload.url};
   }, (error) => {
+    console.log('**** IN UPLOAD - Error retrieving upload URL and passthrough ID ****');
     return({error: error});
   })
 })
