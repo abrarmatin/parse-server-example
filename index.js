@@ -9,6 +9,8 @@ const test = args.some(arg => arg.includes('jasmine'));
 
 const databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 
+console.log('IN INDEX.JS');
+
 if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }

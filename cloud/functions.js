@@ -4,6 +4,7 @@ Parse.Cloud.define('hello', req => {
 });
 
 Parse.Cloud.define('asyncFunction', async req => {
+  console.log('In async function');
   await new Promise(resolve => setTimeout(resolve, 1000));
   req.log.info(req);
   return 'Hi async';

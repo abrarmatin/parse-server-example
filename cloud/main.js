@@ -11,12 +11,12 @@ const { Video } = new Mux();
 //** STEP 2 **
 Parse.Cloud.define('upload', async function(req) {
   // Generate a passthrough ID that will be used to identify the video asset in Mux
-	const id = uuid();
+  const id = uuid();
   console.log('****** IN UPLOAD FUNCTION ********');  
   // Create a new upload using the Mux SDK.
   const upload = await Video.Uploads.create({
-    // Set the CORS origin to your application.
-    cors_origin: 'https://arcane-badlands-69566.herokuapp.com',
+  // Set the CORS origin to your application.
+  cors_origin: 'https://arcane-badlands-69566.herokuapp.com',
 
     // Specify the settings used to create the new Asset after
     // the upload is complete
