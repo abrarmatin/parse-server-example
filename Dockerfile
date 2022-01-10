@@ -8,7 +8,7 @@ RUN npm install
 
 ENV APP_ID azulSocial
 ENV MASTER_KEY setYourMasterKey
-# ENV DATABASE_URI setMongoDBURI
+ENV DATABASE_URI postgres://bfmajtttajbgsl:3040aca2bf20184037a780af861db9cf547160824af81d5bfcf6fffe9b9074cb@ec2-3-89-214-80.compute-1.amazonaws.com:5432/d6hvj590g7e06m
 
 # Optional (default : 'parse/cloud/main.js')
 # ENV CLOUD_CODE_MAIN cloudCodePath

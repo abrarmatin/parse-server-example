@@ -7,7 +7,6 @@ const uuid = require('uuid/v1');
 
 const { Video } = new Mux();
 
-
 //** STEP 2 **
 Parse.Cloud.define('upload', async function(req) {
   // Generate a passthrough ID that will be used to identify the video asset in Mux
